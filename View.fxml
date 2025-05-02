@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller1">
+   <HBox>
+      <children>
+          <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+               <Label layoutX="256.0" layoutY="21.0" text="Mini Project" />
+               <Label layoutX="270.0" layoutY="45.0" text="Survey" />
+               <Label layoutX="99.0" layoutY="80.0" text="What is your name?" />
+               <Label layoutX="99.0" layoutY="122.0" text="What is your DoB?" />
+               <Label layoutX="99.0" layoutY="169.0" text="What is your department?" />
+               <Label layoutX="99.0" layoutY="258.0" text="What is your favorite course" />
+               <TextField fx:id="Tectfield_1" layoutX="214.0" layoutY="76.0" />
+               <DatePicker fx:id="Date_1" layoutX="202.0" layoutY="118.0" />
+               <VBox layoutX="272.0" layoutY="258.0">
+                  <children>
+                     <CheckBox fx:id="Checkbox_pr" mnemonicParsing="false" text="Programming" />
+                     <CheckBox fx:id="Checkbox_c" mnemonicParsing="false" text="Controller" />
+                     <CheckBox fx:id="Checkbox_f" mnemonicParsing="false" text="filter" />
+                  </children>
+               </VBox>
+               <VBox layoutX="254.0" layoutY="160.0">
+                  <children>
+                     <RadioButton fx:id="Radio_GTR" mnemonicParsing="false" text="ITC GTR">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="group_dpt" />
+                        </toggleGroup>
+                     </RadioButton>
+                     <RadioButton fx:id="Radio_GGG" mnemonicParsing="false" text="ITC GGG" toggleGroup="$group_dpt" />
+                     <RadioButton fx:id="Radio_AMS" mnemonicParsing="false" text="ITC AMS" toggleGroup="$group_dpt" />
+                  </children>
+               </VBox>
+               <Button fx:id="Button_Submit" layoutX="254.0" layoutY="353.0" mnemonicParsing="false" text="Submit" />
+               <Label fx:id="Label_status" layoutX="455.0" layoutY="357.0" text="Status                          " />
+               <ImageView fitHeight="71.0" fitWidth="76.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@photo_2022-10-31_15-20-28.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </AnchorPane>
+      </children>
+   </HBox>
+</Scene>
